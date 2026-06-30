@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manjit Pun — IT Engineer building thoughtful web systems, IoT integrations, and cybersecurity-focused projects.">
+  <meta name="theme-color" content="#080a0d">
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('portfolio-theme');
+        var systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = saved || (systemPrefersDark ? 'dark' : 'light');
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    }());
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/icons8-mario-48.png">
+
+  <title>Manjit Pun · IT Engineer</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="ambient-grid" aria-hidden="true"></div>
+  <div class="ambient-rain" aria-hidden="true"></div>
+  <div class="pointer-spotlight" id="pointerSpotlight" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="site-header__inner container">
+      <a class="brand" href="#home" aria-label="Manjit Pun — home">
+        <span class="brand__mark" aria-hidden="true"><img src="/portfolio2.0/images/batman-logo.png" alt=""></span>
+        <span class="brand__text">Er. <span>Manjit Pun</span></span>
+      </a>
+
+      <button class="menu-toggle icon-button" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="siteNavigation">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <nav class="site-nav" id="siteNavigation" aria-label="Primary navigation">
+        <a href="#about">Profile</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-social icon-button" href="https://github.com/manjitmagar" target="_blank" rel="noopener noreferrer" aria-label="Visit Manjit Pun on GitHub">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <a class="header-social icon-button" href="https://www.linkedin.com/in/manjit-pun-9618092a3/" target="_blank" rel="noopener noreferrer" aria-label="Visit Manjit Pun on LinkedIn">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <button class="theme-toggle icon-button" id="themeToggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-shell" id="home" aria-labelledby="hero-title">
+      <div class="hero__halo" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="eyebrow"><span class="status-dot"></span> system profile / online</p>
+          <h1 id="hero-title">Building useful systems <span>after dark.</span></h1>
+          <p class="hero__lead">I’m <strong>Manjit Pun</strong>, an IT Engineer focused on clean web experiences, practical IoT integrations, and cybersecurity-minded problem solving.</p>
+          <p class="hero__copy">I build efficient digital solutions through modern web technologies, connected systems, and a constant drive to turn real-world problems into thoughtful, usable products.</p>
+
+          <div class="hero__actions">
+            <a class="button button--primary" href="#projects">
+              <span>View project archive</span>
+              <i class="fa-solid fa-arrow-down-right" aria-hidden="true"></i>
+            </a>
+            <a class="button button--ghost" href="files/Manjit_Pun_CV.pdf" download data-resume-link>
+              <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+              <span>Download résumé</span>
+            </a>
+          </div>
+
+          <ul class="hero__signals" aria-label="Professional snapshot">
+            <li><span>Role</span><strong>IT Engineer</strong></li>
+            <li><span>Degree</span><strong>BE Information Technology</strong></li>
+            <li><span>Focus</span><strong>Web · IoT · Security</strong></li>
+          </ul>
+        </div>
+
+        <div class="hero__terminal reveal reveal--delay">
+          <div class="terminal" aria-label="Interactive portfolio terminal">
+            <div class="terminal__topbar">
+              <div class="terminal__controls" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="terminal__tabs"><span class="terminal__tab terminal__tab--active">profile.sh</span><span class="terminal__tab">secure-session</span></div>
+              <span class="terminal__signal"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> encrypted</span>
+            </div>
+            <div class="terminal__body" id="terminalBody">
+              <div class="terminal__meta">GNU/Linux · portfolio-console · v2.0</div>
+              <div class="terminal__output" id="terminalOutput" aria-live="polite"></div>
+              <form class="terminal__form" id="terminalForm">
+                <label class="sr-only" for="terminalInput">Enter a terminal command</label>
+                <span class="terminal__prompt" aria-hidden="true">manjit@linux:~$</span>
+                <input id="terminalInput" class="terminal__input" type="text" autocomplete="off" spellcheck="false" placeholder="type help" aria-describedby="terminalHint">
+              </form>
+              <p class="terminal__hint" id="terminalHint">Try <kbd>help</kbd>, <kbd>about</kbd>, <kbd>skills</kbd>, <kbd>projects</kbd>, <kbd>contact</kbd>, <kbd>resume</kbd>, or <kbd>clear</kbd>.</p>
+            </div>
+          </div>
+          <div class="terminal-caption"><span>SESSION 01</span><span>interactive command console</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section-shell--tight" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">01 / profile</p>
+            <h2 id="about-title">A practical builder with a systems mindset.</h2>
+          </div>
+          <p>My work sits at the intersection of web development, connected technology, and security-aware thinking—always with clarity and real utility in mind.</p>
+        </div>
+
+        <div class="profile-grid">
+          <article class="portrait-panel reveal">
+            <div class="portrait-panel__frame">
+              <img src="images/Enhanced.jpeg" alt="Portrait of Me">
+              <div class="portrait-panel__overlay" aria-hidden="true"></div>
+              <div class="portrait-panel__label"><span>MP / 2058</span><span>field profile</span></div>
+            </div>
+          </article>
+
+          <div class="profile-grid__details">
+            <article class="intel-card reveal reveal--delay">
+              <span class="intel-card__index">A</span>
+              <div>
+                <p class="intel-card__label">Core focus</p>
+                <h3>Thoughtful digital solutions</h3>
+                <p>From responsive interfaces to connected applications, I enjoy translating complex needs into systems that feel direct and dependable.</p>
+              </div>
+            </article>
+            <article class="intel-card reveal reveal--delay-2">
+              <span class="intel-card__index">B</span>
+              <div>
+                <p class="intel-card__label">Academic base</p>
+                <h3>BE in Information Technology</h3>
+                <p>A technical foundation that supports my interest in full-stack development, computer vision, IoT, and cybersecurity practices.</p>
+              </div>
+            </article>
+            <article class="intel-card reveal reveal--delay-3">
+              <span class="intel-card__index">C</span>
+              <div>
+                <p class="intel-card__label">Working style</p>
+                <h3>Clear, curious, and detail-oriented</h3>
+                <p>I care about maintainable implementation, useful interactions, and continuing to learn from every project cycle.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">02 / capability modules</p>
+            <h2 id="skills-title">Tools I keep in the kit.</h2>
+          </div>
+          <p>Organized like a terminal readout, with the technologies and disciplines already present across my portfolio work.</p>
+        </div>
+
+        <div class="capability-console reveal">
+          <div class="capability-console__header">
+            <span><i class="fa-solid fa-terminal" aria-hidden="true"></i> manjit@linux:~/capabilities</span>
+            <span class="capability-console__status"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> modules loaded</span>
+          </div>
+          <div class="capability-grid">
+            <article class="skill-module">
+              <div class="skill-module__heading"><span>web.stack</span><em>01</em></div>
+              <div class="skill-tags">
+                <span class="skill-tag"><img src="images/html-logo.webp" alt="">HTML</span>
+                <span class="skill-tag"><img src="images/css-logo.webp" alt="">CSS</span>
+                <span class="skill-tag"><img src="images/javascript-logo.webp" alt="">JavaScript</span>
+                <span class="skill-tag"><img src="images/react-logo.webp" alt="">React.js</span>
+                <span class="skill-tag"><img src="images/node-logo.webp" alt="">Node.js</span>
+                <span class="skill-tag"><img src="images/python.png" alt="">Python</span>
+              </div>
+            </article>
+            <article class="skill-module">
+              <div class="skill-module__heading"><span>systems.security</span><em>02</em></div>
+              <div class="skill-tags">
+                <span class="skill-tag"><img src="images/linux-brands.svg" alt="">Linux</span>
+                <span class="skill-tag"><img src="images/ethical-hacking.png" alt="">Penetration Testing</span>
+                <span class="skill-tag"><img src="images/dictionary.png" alt="">Dictionary Attack</span>
+                <span class="skill-tag"><img src="images/iot.png" alt="">IoT Development</span>
+                <span class="skill-tag"><img src="images/mongodb.png" alt="">Database Management</span>
+                <span class="skill-tag"><img src="images/NGINXV1.png" alt="">NGINX</span>
+              </div>
+            </article>
+            <article class="skill-module skill-module--wide">
+              <div class="skill-module__heading"><span>creative.tools</span><em>03</em></div>
+              <div class="skill-tags">
+                <span class="skill-tag"><img src="images/adobe-photoshop.png" alt="">Adobe Lightroom</span>
+                <span class="skill-tag"><img src="images/canva.png" alt="">Canva</span>
+              </div>
+              <p class="skill-module__note">Supporting visual polish and clear communication alongside technical implementation.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section-shell--tight" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">03 / project archive</p>
+            <h2 id="projects-title">Selected missions, built for real problems.</h2>
+          </div>
+          <p>Each project reflects an interest in making complex technology useful—from intelligent traffic systems to everyday services.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-card__visual">
+              <img src="images/vechile dtection.jpg" alt="Vehicle detection interface used in the Flow Sync project">
+              <div class="project-card__scan" aria-hidden="true"></div>
+              <span class="project-card__number">01</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>Smart systems</span><span>Computer vision</span></div>
+              <h3>Flow Sync Traffic Optimization</h3>
+              <p>Smart traffic optimization that adjusts signal timing from real-time vehicle density, combining computer vision with a practical web interface.</p>
+              <details class="project-card__details">
+                <summary>Read mission briefing <i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                <p>Flow Sync is a smart traffic optimization web application designed to reduce congestion by dynamically adjusting traffic light durations based on real-time vehicle density. For this project, I employed a combination of Python-Django for the backend and React.js for the frontend, with YOLO (You Only Look Once) for vehicle detection through computer vision. The system processes live video feeds to detect the number of vehicles in each lane and uses this data to optimize traffic signal timings accordingly. This project not only highlights my skills in full-stack development but also demonstrates my interest in integrating emerging technologies like AI and IoT to solve urban challenges. It represents a practical approach to making smart cities more efficient and sustainable.</p>
+              </details>
+              <div class="project-card__tags"><span>Python</span><span>Django</span><span>React.js</span><span>YOLO</span><span>IoT</span></div>
+              <div class="project-card__actions">
+                <a href="https://github.com/manjitmagar/React-Js-App-Interface-For-Major-Project/tree/main/manjitmagar" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal--delay">
+            <div class="project-card__visual">
+              <img src="images/handgesture.jpg" alt="Hand tracking and gesture recognition view">
+              <div class="project-card__scan" aria-hidden="true"></div>
+              <span class="project-card__number">02</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>Deep learning</span><span>Real time</span></div>
+              <h3>Sign Language Recognition</h3>
+              <p>A real-time sign-language recognition system using hand tracking, computer vision, and deep learning.</p>
+              <details class="project-card__details">
+                <summary>Read mission briefing <i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                <p>Developed a real-time sign language recognition system using computer vision and deep learning. The application detects hand gestures via webcam using cvzone's HandTrackingModule, processes the hand image, and classifies the gesture using a trained Keras/TensorFlow model. The system utilizes OpenCV for video processing and TFLite/Keras for efficient model inference. It supports real-time gesture classification with dynamic bounding boxes and live label overlays. This project showcases skills in computer vision, deep learning, and real-time application development using Python.</p>
+              </details>
+              <div class="project-card__tags"><span>Python</span><span>OpenCV</span><span>TensorFlow</span><span>Keras</span><span>CVZone</span></div>
+              <div class="project-card__actions">
+                <a href="https://github.com/manjitmagar/Sign-Language-Detection" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__visual">
+              <img src="images/LPG.webp" alt="LPG Gas Ordering System interface">
+              <div class="project-card__scan" aria-hidden="true"></div>
+              <span class="project-card__number">03</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>Commerce</span><span>Backend systems</span></div>
+              <h3>LPG Gas Ordering System</h3>
+              <p>A backend-focused ordering system built around authentication, inventory management, payments, and real-time order updates.</p>
+              <details class="project-card__details">
+                <summary>Read mission briefing <i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                <p>The LPG Gas Ordering System is a robust backend solution designed to streamline the process of ordering liquefied petroleum gas online. I developed this system to handle critical functions such as user authentication, inventory management, and real-time order processing. One of the key features of the system is its seamless integration with secure payment gateways, allowing customers to place and pay for orders with confidence. Additionally, I implemented real-time order tracking to provide users with live updates on their order status, enhancing transparency and user experience. This project showcases my proficiency in backend development and my ability to build scalable, secure systems that meet real-world commercial needs.</p>
+              </details>
+              <div class="project-card__tags"><span>Authentication</span><span>Inventory</span><span>Payments</span><span>Order tracking</span></div>
+              <div class="project-card__actions">
+                <a href="https://github.com/manjitmagar/LPG-GAS-OS" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal--delay">
+            <div class="project-card__visual">
+              <img src="images/laptop.webp" alt="Laptop Hospital web application view">
+              <div class="project-card__scan" aria-hidden="true"></div>
+              <span class="project-card__number">04</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>Web app</span><span>E-commerce</span></div>
+              <h3>Laptop Hospital Web App</h3>
+              <p>A user-friendly e-commerce experience for laptops and accessories, designed around a responsive, intuitive buying journey.</p>
+              <details class="project-card__details">
+                <summary>Read mission briefing <i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                <p>The Laptop Hospital Web App is a user-friendly e-commerce platform designed to simplify the buying experience for laptops and related accessories. I developed this web application with a focus on intuitive design and functionality, ensuring users could easily browse, search, and purchase products. The platform features a clean UI/UX and was built to support future enhancements such as customer reviews, inventory tracking, and promotional tools. My work on this project demonstrates a strong understanding of front-end design principles as well as backend integration, resulting in a responsive and engaging shopping experience. This project also reflects my ability to align technical solutions with business goals and user expectations.</p>
+              </details>
+              <div class="project-card__tags"><span>UI/UX</span><span>E-commerce</span><span>Responsive UI</span><span>Backend integration</span></div>
+              <div class="project-card__actions">
+                <a href="https://github.com/manjitmagar/Laptop-Hospital" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> Source code <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section-shell--tight" id="hobbies" aria-labelledby="hobbies-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">04 / off-duty log</p>
+            <h2 id="hobbies-title">Curiosity beyond the terminal.</h2>
+          </div>
+          <p>The same curiosity that informs technical work follows me into exploration, music, photography, and new tools.</p>
+        </div>
+        <div class="hobby-grid">
+          <article class="hobby-card reveal"><img src="images/motorcycle.png" alt=""><span class="hobby-card__index">01</span><h3>Biking</h3></article>
+          <article class="hobby-card reveal reveal--delay"><img src="images/gaming.png" alt=""><span class="hobby-card__index">02</span><h3>Gaming</h3></article>
+          <article class="hobby-card reveal reveal--delay-2"><img src="images/guitar-playing.png" alt=""><span class="hobby-card__index">03</span><h3>Playing Guitar</h3></article>
+          <article class="hobby-card reveal reveal--delay"><img src="images/ethical-hacking.png" alt=""><span class="hobby-card__index">04</span><h3>Exploring Cybersecurity Tools</h3></article>
+          <article class="hobby-card reveal reveal--delay-2"><img src="images/camera.png" alt=""><span class="hobby-card__index">05</span><h3>Photography</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell" id="credentials" aria-labelledby="credentials-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">05 / credentials</p>
+            <h2 id="credentials-title">Training and recognition.</h2>
+          </div>
+          <p>Select a certificate to inspect it in a focused, accessible preview.</p>
+        </div>
+        <div class="certificate-grid">
+          <button class="certificate-card reveal" type="button" data-certificate-src="images/certificate1.jpg" data-certificate-alt="Python AI Training certificate">
+            <img src="images/certificate1.jpg" alt="Python AI Training certificate">
+            <span class="certificate-card__footer"><span>Python AI Training</span><i class="fa-solid fa-expand" aria-hidden="true"></i></span>
+          </button>
+          <button class="certificate-card reveal reveal--delay" type="button" data-certificate-src="images/certificate2.jpg" data-certificate-alt="Hackfest Best Innovation certificate">
+            <img src="images/certificate2.jpg" alt="Hackfest Best Innovation certificate">
+            <span class="certificate-card__footer"><span>Hackfest Best Innovation</span><i class="fa-solid fa-expand" aria-hidden="true"></i></span>
+          </button>
+          <button class="certificate-card reveal reveal--delay-2" type="button" data-certificate-src="images/certificate3.jpg" data-certificate-alt="NCIT Project Exhibition certificate">
+            <img src="images/certificate3.jpg" alt="NCIT Project Exhibition certificate">
+            <span class="certificate-card__footer"><span>NCIT Project Exhibition</span><i class="fa-solid fa-expand" aria-hidden="true"></i></span>
+          </button>
+          <button class="certificate-card reveal" type="button" data-certificate-src="images/coursera cybersecurity.jpg" data-certificate-alt="Palo Alto Networks Cybersecurity Foundation certificate">
+            <img src="images/coursera cybersecurity.jpg" alt="Palo Alto Networks Cybersecurity Foundation certificate">
+            <span class="certificate-card__footer"><span>Palo Alto Networks Cybersecurity Foundation</span><i class="fa-solid fa-expand" aria-hidden="true"></i></span>
+          </button>
+          <button class="certificate-card reveal reveal--delay" type="button" data-certificate-src="images/google.jpg" data-certificate-alt="Crash Course on Python certificate">
+            <img src="images/google.jpg" alt="Crash Course on Python certificate">
+            <span class="certificate-card__footer"><span>Crash Course on Python</span><i class="fa-solid fa-expand" aria-hidden="true"></i></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-shell" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__panel reveal">
+        <div>
+          <p class="eyebrow">06 / establish contact</p>
+          <h2 id="contact-title">Have a project in mind?<br><span>Open a secure line.</span></h2>
+          <p>For collaboration, ideas, or a conversation about technology, choose a channel below.</p>
+        </div>
+        <div class="contact__actions">
+          <a class="button button--primary" href="mailto:manjitpun2058@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>manjitpun2058@gmail.com</span></a>
+          <div class="contact__links">
+            <a href="https://github.com/manjitmagar" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/manjit-pun-9618092a3/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            <a href="https://x.com/manjitpunmagar" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X / Twitter <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p><span class="status-dot"></span> manjit@linux:~$ <strong>session complete</strong></p>
+      <a href="#top">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+    </div>
+  </footer>
+
+  <button class="scroll-top icon-button" id="scrollToTopBtn" type="button" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <dialog class="certificate-dialog" id="certificateDialog" aria-labelledby="certificateDialogTitle">
+    <div class="certificate-dialog__header">
+      <p id="certificateDialogTitle">Credential preview</p>
+      <button class="icon-button" id="certificateDialogClose" type="button" aria-label="Close certificate preview"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    </div>
+    <img id="certificateDialogImage" src="" alt="">
+  </dialog>
+
+  <noscript><div class="noscript">This portfolio is best experienced with JavaScript enabled; all project and contact links remain available.</div></noscript>
+  <script src="script.js"></script>
+</body>
+</html>
